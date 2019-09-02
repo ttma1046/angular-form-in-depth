@@ -1,0 +1,6 @@
+<div [formGroup]="addressForm">
+  <input
+  type="text" formControlName="street" (blur)="onTouched()">
+  <input
+  type="text" formControlName="city" (blur)="onTouched()">
+</div>

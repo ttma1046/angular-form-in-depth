@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+  <input formControlName="first" place-holder="First" />
+  <input formControlName="last" place-holder="Last" />
+  <required-text formControlName="required"></required-text>
+  <address formControlName="address"></address>
+  <address-two></address-two>
+<!--   <wrapped-form>
+    <div formGroupname="addressTwo">
+      <input type="text" fromControlName="street">
+      <input type="text" fromControlName="city">
+    </div>
+  </wrapped-form> -->
+
+  <form-stepper>
+    <ng-template>
+    <step>
+      <div ngModelGroup="address">
+        <input name="street" ngModel>
+        <input name="city" ngModel>
+      </div>
+    </step>
+    </ng-template>
+  </form-stepper>
+
+
+  <button type="submit">Submit</button>
+</form>
+<p>
+  {{ form.status | json }}
+  {{ form.value | json }}
+</p>

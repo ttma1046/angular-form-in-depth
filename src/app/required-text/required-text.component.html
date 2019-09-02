@@ -1,0 +1,12 @@
+<input
+  type="text"
+  #input
+  (input)="onChange($event.target.value)"
+  (blur)="onTouched($event.target.value)"
+  [disabled]="disabled"
+>
+
+<div class="error"
+  *ngIf="controlDir && !controlDir.control.valid">
+  This field is invalid;
+</div>
