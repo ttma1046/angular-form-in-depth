@@ -13,10 +13,9 @@ import { FormGroupDirective, FormGroup, ControlContainer, FormControl } from '@a
   ]
 })
 export class AddressTwoComponent implements OnInit {
-  // directive: FormGroupDirective;
+
 
   constructor(private parent: FormGroupDirective) {
-    // this.directive = parent;
   }
 
   ngOnInit() {

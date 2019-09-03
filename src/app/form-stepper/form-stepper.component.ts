@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ContentChild, TemplateRef } from '@angula
 import { NgForm, ControlContainer } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-stepper',
+  selector: 'form-stepper',
   templateUrl: './form-stepper.component.html',
   styleUrls: ['./form-stepper.component.scss'],
   providers: [
@@ -14,8 +14,8 @@ import { NgForm, ControlContainer } from '@angular/forms';
   ]
 })
 export class FormStepperComponent implements OnInit {
-  @ViewChild(NgForm) from: NgForm;
-  @ContentChild(TemplateRef) template: TemplateRef<any>;
+  @ViewChild(NgForm, { static: true }) from: NgForm;
+  @ContentChild(TemplateRef, { static: true }) template: TemplateRef<any>;
 
   constructor() { }
 
